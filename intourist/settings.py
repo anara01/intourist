@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9!l(%fmwn^4#ns39say6cju293c#hmr+jjpyrw^zre7x04ok2a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-	'core',
-	'places',
+    'core',
+    'places',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +82,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'intourist_db',
+#        'USER': 'postgres',
+#        'PASSWORD': 'postgres',
+#        'HOST': '127.0.0.1',
+#        'PORT': '5432',
+#    }
+# }
 
 
 # Password validation
