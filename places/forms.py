@@ -1,10 +1,11 @@
 from django import forms
 from .models import Place, Feedback
 
+
 class PlaceForm(forms.ModelForm):
-	class Meta:
-		model = Place
-		fields = ['name', 'location', 'description']
+    class Meta:
+        model = Place
+        fields = ['name', 'location', 'img', 'description']
 
 
 class FeedbackForm(forms.ModelForm):
